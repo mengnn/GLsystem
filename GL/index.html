@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>管理系统</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/menage.css"/>
+    <link rel="stylesheet" href="laydate/need/laydate.css">
+    <!-- <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="themes/icon.css"> -->
+
+</head>
+<body>
+
+  <div class="content">
+     <div class="top">
+        <img src="images/logo.png"/>
+        <div class="top_txt">
+           蜜蜂在线信息化管理系统
+           <span>v1.0.0.0</span>
+        </div>
+        <div class="f_right top_right">
+          <img src="images/maill.png" width="65" height="40" />
+          <a href="#">联系我们</a>&nbsp;&nbsp;|&nbsp;
+          <span>帮助</span>
+        </div>
+     </div>
+     <div class="main">
+       <div class="main_left f_left">
+          <!-- <div class="nav_top">
+            <input class="search" placeholder="搜索关键字">
+            <img src="images/search.png" width="25"/>
+          </div> -->
+          <div class="nav_middle">
+             <div class="nav_one">
+               <img src="images/user1.png" width="25" class="user" />
+               <span class="txt">账户管理</span>
+               <img src="images/jbottom.png" width="25" height="25" class="jT jT1" dir="1"/>
+             </div>
+             <ul class="ul_one">
+               <li onclick="module2();">新增账号管理员</li>
+               <li onclick="module3();">发布账号</li>
+               <li onclick="module4();">上传账号</li>
+               <li onclick="module5();">追溯账号</li>
+             </ul>
+             <div class="nav_two">
+               <img src="images/consult1.png" width="25" class="user" />
+               <span class="txt">资讯管理</span>
+               <img src="images/jbottom.png" width="25" height="25" class="jT jT2" dir="1"/>
+             </div>
+             <div class="nav_three">
+               <img src="images/about1.png" height="25" width="25" class="user" />
+               <span class="txt">关于我们</span>
+               <img src="images/jbottom.png" width="25" height="25" class="jT jT3" dir="1"/>
+             </div>
+             <div class="nav_four">
+               <img src="images/core1.png" height="25" width="25" class="user" />
+               <span class="txt">产品中心</span>
+               <img src="images/jbottom.png" width="25" height="25" class="jT jT4" dir="1"/>
+             </div>
+             <ul class="ul_four">
+               <li onclick="module8();">产品管理</li>
+               <li onclick="module10();">设置推荐经销商</li>
+             </ul>
+
+          </div>
+       </div>
+
+       <div class="main_right f_right">
+          <div class="wel_time">
+             <div class="wel_txt f_left">
+                欢迎管理员登录!
+             </div>
+             <div class="time_txt f_right"></div>
+          </div>
+          <div class="main_module">
+             <div class="main_module1" style="">
+                <div class="module1_left f_left">
+                    <div class="module1_top">
+                       <div class="le1_txt f_left">
+                           新增事项
+                       </div>
+                       <select  class="sel_time f_right">
+                         <option value="">最近7天</option>
+                         <option value="">最近14天</option>
+                         <option value="">最近30天</option>
+                       </select>
+                    </div>
+                    <table class="module1_table">
+                      <tr>
+                        <td>
+                          新增发布账号<span>2</span>个
+                        </td>
+                        <td>
+                          新增上传账号<span>1</span>个
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          新增追溯账号<span>10</span>个
+                        </td>
+                        <td>
+                          新增查询产品记录<span>20</span>个
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                           新增产品<span>15</span>个
+                        </td>
+                        <td>
+                           新增资讯<span>3</span>个
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="module1_top gong_G">
+                       <div class="le1_txt f_left">
+                           公告
+                       </div>
+                    </div>
+                    <table class="gong_txt">
+                      <tr>
+                        <td>
+                          Royal International 真伪查询APP今天上线啦！
+                        </td>
+                        <td>
+                          2017-7-18
+                        </td>
+                      </tr>
+                    </table>
+                </div>
+                <div class="module1_right f_right">
+                    <div class="module1_Rtop">
+                       <div class="le1_txt f_left">
+                           新增事项
+                       </div>
+                   </div>
+                   <div class="Rmodule_txt">
+                      <p>关于防伪码标签的说明</p>
+                      <p>防伪码是由英联国泰研发的防伪二维码。它将传统二维码的防伪功能进行优化与升级，让商品防伪更加方便快捷。</p>
+                      <p>通过英联国泰彩色二位防伪系统对产品一一生成加密的二维码产品信息，将二维码印刷或标签于产品包装上，用户只需通过指定的二维码防伪系统或手机软件进行解码检验，即可获知该产品的一连串的正品安全信息，如产品生产日期、生产地址、产品信息，从而达到放心购买和监督打假的作用。二维码可存储丰富的产品信息，通过加密不易被复制盗用，产品信息来自企业官方发布，查询渠道正规、专业，实现了产品信息防伪的高效性。</p>
+                   </div>
+                </div>
+             </div>
+             <div class="main_module2">
+                <!-- <div class="module6_top">
+                    <div class="Z_l f_left">资讯</div>
+                    <div class="Z_r f_right" onclick="module66();">添加资讯</div>
+                </div> -->
+                <div class="module2_top">
+                   <div class="G_l f_left">新增账号管理员</div>
+                    <div class="G_r f_right" onclick="module22();">添加账号</div>
+                </div>
+                <table class="module2_tab">
+                    <tr>
+                      <td>id</td>
+                      <td>使用者</td>
+                      <td>用户名</td>
+                      <td>密码</td>
+                      <td>开户日期</td>
+                      <td colspan="2">操作</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                </table>
+                <div class="next_html">
+                     <div class="next_box">
+                       <span>首页</span>
+                       <span class="rem" onclick="rem(this);">上一页</span>
+                       <input type="text" value="1" class="num_html">
+                       <span class="add" onclick="add(this);">下一页</span>
+                     </div>
+                </div>
+             </div>
+             <div class="main_module22">
+                <div class="module22_top">
+                  <span class="return" onclick="module2();">返回</span>
+                   新增账号管理员添加
+                </div>
+                <div class="XZ_biao">
+                  <span>使用者：</span>
+                  <input type="text" value="小明" readonly>
+                </div>
+                <div class="XZ_name">
+                  <span>用户名：</span>
+                  <input type="text" value="xiaoming" readonly>
+                </div>
+                <div class="XZ_pasw">
+                  <span>密码：</span>
+                  <input type="text" value="mnn123456" readonly>
+                </div>
+                <div class="XZ_time">
+                  <span>开户日期：</span>
+                  <input id="XZ" type="text" value="20170804">
+                </div>
+                <div class="sub_btn22">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+             <div class="main_module3">
+                <div class="module3_top">
+                    <div class="F_l f_left">发布账号</div>
+                    <div class="F_r f_right" onclick="module33();">添加账号</div>
+                </div>
+                <table class="module3_tab">
+                    <tr>
+                      <td>id</td>
+                      <td>使用者</td>
+                      <td>用户名</td>
+                      <td>密码</td>
+                      <td>开户日期</td>
+                      <td colspan="2">操作</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                </table>
+                <div class="next_html">
+                     <div class="next_box">
+                       <span>首页</span>
+                       <span class="rem" onclick="rem(this);">上一页</span>
+                       <input type="text" value="1" class="num_html">
+                       <span class="add" onclick="add(this);">下一页</span>
+                     </div>
+                </div>
+             </div>
+             <div class="main_module33">
+                <div class="module33_top">
+                <span class="return" onclick="module3();">返回</span>
+                   发布账号
+                </div>
+                <div class="FB_biao">
+                  <span>使用者：</span>
+                  <input type="text" value="小明" readonly>
+                </div>
+                <div class="FB_name">
+                  <span>用户名：</span>
+                  <input type="text" value="xiaoming" readonly>
+                </div>
+                <div class="FB_pasw">
+                  <span>密码：</span>
+                  <input type="text" value="mnn123456" readonly>
+                </div>
+                <div class="FB_time">
+                  <span>开户日期：</span>
+                  <input id="FB" type="text" value="20170804" >
+                </div>
+                <div class="sub_btn33">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+             <div class="main_module4">
+                <div class="module4_top">
+                    <div class="SC_l f_left">上传账号</div>
+                    <div class="SC_r f_right" onclick="module44();">添加账号</div>
+                </div>
+                <table class="module4_tab">
+                    <tr>
+                      <td>id</td>
+                      <td>使用者</td>
+                      <td>用户名</td>
+                      <td>密码</td>
+                      <td>开户日期</td>
+                      <td colspan="2">操作</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                </table>
+                <div class="next_html">
+                     <div class="next_box">
+                       <span>首页</span>
+                       <span class="rem" onclick="rem(this);">上一页</span>
+                       <input type="text" value="1" class="num_html">
+                       <span class="add" onclick="add(this);">下一页</span>
+                     </div>
+                </div>
+             </div>
+             <div class="main_module44">
+                <div class="module44_top">
+                   <span class="return" onclick="module4();">返回</span>
+                   上传账号
+                </div>
+                <div class="SC_biao">
+                  <span>使用者：</span>
+                  <input type="text" value="小明" readonly>
+                </div>
+                <div class="SC_name">
+                  <span>用户名：</span>
+                  <input type="text" value="xiaoming" readonly>
+                </div>
+                <div class="SC_pasw">
+                  <span>密码：</span>
+                  <input type="text" value="mnn123456" readonly>
+                </div>
+                <div class="SC_time">
+                  <span>开户日期：</span>
+                  <input id="SC" type="text" value="20170804" >
+                </div>
+                <div class="sub_btn44">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+             <div class="main_module5">
+                <div class="module5_top">
+                    <div class="ZS_l f_left">追溯账号</div>
+                    <div class="ZS_r f_right" onclick="module55();">添加账号</div>
+                </div>
+                <table class="module5_tab">
+                    <tr>
+                      <td>id</td>
+                      <td>使用者</td>
+                      <td>用户名</td>
+                      <td>密码</td>
+                      <td>开户日期</td>
+                      <td colspan="2">操作</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td>小明</td>
+                      <td>123456</td>
+                      <td>20170508</td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                </table>
+                <div class="next_html">
+                     <div class="next_box">
+                       <span>首页</span>
+                       <span class="rem" onclick="rem(this);">上一页</span>
+                       <input type="text" value="1" class="num_html">
+                       <span class="add" onclick="add(this);">下一页</span>
+                     </div>
+                </div>
+             </div>
+             <div class="main_module55">
+                <div class="module55_top">
+                   <span class="return" onclick="module5();">返回</span>
+                   追溯账号
+                </div>
+                <div class="ZC_biao">
+                  <span>使用者：</span>
+                  <input type="text" value="小明" readonly>
+                </div>
+                <div class="ZC_name">
+                  <span>用户名：</span>
+                  <input type="text" value="xiaoming" readonly>
+                </div>
+                <div class="ZC_pasw">
+                  <span>密码：</span>
+                  <input type="text" value="mnn123456" readonly>
+                </div>
+                <div class="ZC_time">
+                  <span>开户日期：</span>
+                  <input ID="ZC" type="text" value="20170804" >
+                </div>
+                <div class="sub_btn55">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+             <div class="main_module6">
+                <div class="module6_top">
+                    <div class="Z_l f_left">资讯</div>
+                    <div class="Z_r f_right" onclick="module66();">添加资讯</div>
+                </div>
+                <table class="module6_tab">
+                    <tr>
+                      <td>咨询id</td>
+                      <td>咨询标题</td>
+                      <td>咨询图片</td>
+                      <td>时间</td>
+                      <td>是否轮播</td>
+                      <td colspan="2">操作</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>标题1</td>
+                      <td><img src="images/1.jpg" alt=""></td>
+                      <td>2017-07-08</td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>标题2</td>
+                      <td><img src="images/1.jpg" alt=""></td>
+                      <td>2017-08-08</td>
+                      <td>
+                           <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>标题3</td>
+                      <td><img src="images/2.png" alt=""></td>
+                      <td>2017-09-08</td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                </table>
+                <div class="next_html">
+                     <div class="next_box">
+                       <span>首页</span>
+                       <span class="rem" onclick="rem(this);">上一页</span>
+                       <input type="text" value="1" class="num_html">
+                       <span class="add" onclick="add(this);">下一页</span>
+                     </div>
+                </div>
+             </div>
+             <div class="main_module66">
+                <div class="module66_top">
+                   <span class="return" onclick="module6();">返回</span>
+                   资讯添加
+                </div>
+                <div class="X_biao">
+                  <span>资讯标题：</span>
+                  <input type="text" value="你好" readonly>
+                </div>
+                <div class="X_time">
+                  <span>添加时间：</span>
+                  <input id="X_time" type="text" value="2014-6-15 23:00:00" readonly>
+                </div>
+                <div class="X_img">
+                  <span>添加图片：</span>
+                  <img src="images/007.jpg" class="file_img">
+                  <input type="file" value="选择" class="filepath">
+                </div>
+                <div class="X_img2">
+                  <span>添加图片：</span>
+                  <img src="images/007.jpg" class="file_img">
+                  <input type="file" value="选择" class="filepath">
+                </div>
+                <div class="X_img3">
+                  <span>添加图片：</span>
+                  <img src="images/007.jpg" class="file_img">
+                  <input type="file" value="选择" class="filepath">
+                </div>
+                <div class="xzeng" dir="1" onclick="xzeng(this);">新增图片</div>
+                <div class="X_shao">
+                  <span>资讯详情：</span>
+                  <!-- <textarea  cols="40" rows="4"></textarea> -->
+                  <div class="editor_ue" style="display: inline-block;">
+                    <script id="editor2" type="text/plain" style="width:700px;height:300px;"></script>
+                  </div>
+                </div>
+                <div class="X_lian">
+                  <span>链接：</span>
+                  <input type="text" value="www.net.com" readonly>
+                </div>
+                <div class="sub_btn66">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+             <div class="main_module7" >
+                <div class="module7_top">
+                   关于我们
+                </div>
+                <div class="img">
+                  <span>图片：</span>
+                  <img src="images/007.jpg" class="file_img">
+                  <input type="file" value="选择" class="filepath">
+                </div>
+                <div class="J_shao">
+                  <span>公司介绍：</span>
+                  <!-- <textarea  cols="40" rows="4"></textarea> -->
+                  <div class="editor_ue" style="display: inline-block;">
+                    <script id="editor" type="text/plain" style="width:700px;height:300px;"></script>
+                  </div>
+                </div>
+                <div class="D_map">
+                  <span>地址：</span>
+                  <input type="text" value="中国上海" readonly>
+                </div>
+                <div class="C_maill">
+                  <span>传真：</span>
+                  <input type="text" value="0371-8888888" readonly>
+                </div>
+                <div class="D_phone">
+                  <span>电话：</span>
+                  <input type="text" value="0371-9999999" readonly>
+                </div>
+                <div class="W_web">
+                  <span>网址：</span>
+                  <input type="text" value="www.net.com" readonly>
+                </div>
+                <div class="sub_btn">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+             <div class="main_module8">
+                <div class="module8_top">
+                    <div class="s_l f_left">商品</div>
+                    <div class="s_r f_right" onclick="module9();">添加商品</div>
+                </div>
+                <table class="module8_tab">
+                    <tr>
+                      <td>商品id</td>
+                      <td>商品名称</td>
+                      <td>商品图片</td>
+                      <td>商品价格</td>
+                      <td>是否轮播</td>
+                      <td>是否推荐</td>
+                      <td colspan="2">操作</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>矿泉水</td>
+                      <td><img src="images/1.jpg" alt=""></td>
+                      <td>10元</td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>化妆品</td>
+                      <td><img src="images/1.jpg" alt=""></td>
+                      <td>100元</td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>化妆品</td>
+                      <td><img src="images/2.png" alt=""></td>
+                      <td>100元</td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td>
+                          <div class="mnn_reset" onclick="projectSwitch(this)">
+                             <i class="on_left on_style"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="off_right"></i>
+                             <span class="dot"></span>
+                          </div>
+                      </td>
+                      <td><a href="#">修改</a></td>
+                      <td><a href="#" onclick="del(this);">删除</a></td>
+                    </tr>
+                </table>
+                <div class="next_html">
+                     <div class="next_box">
+                       <span>首页</span>
+                       <span class="rem" onclick="rem(this);">上一页</span>
+                       <input type="text" value="1" class="num_html">
+                       <span class="add" onclick="add(this);">下一页</span>
+                     </div>
+                </div>
+             </div>
+             <div class="main_module9">
+                <div class="module9_top">
+                   <span class="return" onclick="module8();">返回</span>
+                   商品添加
+                </div>
+                <div class="S_name">
+                  <span>商品名称：</span>
+                  <input type="text" value="中国上海" readonly>
+                </div>
+                <div class="S_img">
+                  <span>商品图片：</span>
+                  <img src="images/007.jpg" width="100">
+                  <input type="file" value="选择">
+                </div>
+                <div class="S_jia">
+                  <span>商品价格：</span>
+                  <input type="text" readonly>
+                </div>
+                <div class="S_time">
+                  <span>添加时间：</span>
+                  <input id="S_time" type="text" value="2014-6-15 23:00:00" readonly>
+                </div>
+                <div class="S_lian">
+                  <span>链接：</span>
+                  <input type="text" value="www.net.com" readonly>
+                </div>
+                <div class="sub_btn9">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+             <div class="main_module10">
+                <div class="module10_top">
+                   推荐经销商图片设置
+                </div>
+                <table class="module10_tab">
+                   <tr>
+                     <td>经销商id</td>
+                     <td>经销商名称</td>
+                     <td>图片</td>
+                     <td colspan="2"><a href="#" onclick="module11();">新增推荐经销商</a></td>
+                   </tr>
+                   <tr>
+                     <td>1</td>
+                     <td>蜜蜂在线</td>
+                     <td><img src="images/1.jpg" alt=""></td>
+                     <td><a href="#">修改</a></td>
+                     <td><a href="#" onclick="del(this);">删除</a></td>
+                   </tr>
+                   <tr>
+                     <td>2</td>
+                     <td>蜜蜂在线</td>
+                     <td><img src="images/2.png" alt=""></td>
+                     <td><a href="#">修改</a></td>
+                     <td><a href="#" onclick="del(this);">删除</a></td>
+                   </tr>
+                </table>
+                <div class="next_html">
+                     <div class="next_box">
+                       <span>首页</span>
+                       <span class="rem" onclick="rem(this);">上一页</span>
+                       <input type="text" value="1" class="num_html">
+                       <span class="add" onclick="add(this);">下一页</span>
+                     </div>
+                </div>
+             </div>
+             <div class="main_module11">
+                <div class="module11_top">
+                   <span class="return" onclick="module10();">返回</span>
+                   新增推荐经销商
+                </div>
+                <div class="J_name">
+                  <span>经销商名称：</span>
+                  <input type="text" value="中国上海" readonly>
+                </div>
+                <div class="J_img">
+                  <span>经销商图片：</span>
+                  <img src="images/007.jpg" width="100">
+                  <input type="file" value="选择">
+                </div>
+                <div class="sub_btn11">
+                    <div>
+                      修改
+                    </div>
+                </div>
+             </div>
+          </div>
+       </div>
+     </div>
+
+
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/menage.js"></script>
+<script type="text/javascript" charset="utf-8" src="ue/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ue/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="ue/lang/zh-cn/zh-cn.js"></script>
+<!-- <script src="js/jquery.easyui.min.js"></script> -->
+<script src="laydate/laydate.js"></script>
+<script>
+
+    var ue = UE.getEditor('editor');
+    var ue = UE.getEditor('editor2');
+    function clearUE(){
+      //清空编辑器
+        ue.execCommand('cleardoc');
+    };
+
+    function setContent(isAppendTo) { //追加内容
+        var arr = [];
+        // arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('${1}', isAppendTo);
+        // alert(arr.join("\n"));
+    }
+    $(".panel-body").css("width","100%");
+
+</script>
+<script>
+;!function(){
+laydate({
+   elem: '#S_time',
+   format: 'YYYY/MM/DD hh:mm:ss', // 分隔符可以任意定义，该例子表示只显示年月
+   festival: true, //显示节日
+   start: '2014-6-15 23:00:00',
+   istime: true
+})
+laydate({
+   elem: '#X_time',
+   format: 'YYYY/MM/DD hh:mm:ss', // 分隔符可以任意定义，该例子表示只显示年月
+   festival: true, //显示节日
+   start: '2014-6-15 23:00:00',
+   istime: true
+})
+
+laydate({
+   elem: '#XZ',
+   format: 'YYYY/MM/DD hh:mm:ss', // 分隔符可以任意定义，该例子表示只显示年月
+   festival: true, //显示节日
+   start: '2014-6-15 23:00:00',
+   istime: true
+})
+
+laydate({
+   elem: '#FB',
+   format: 'YYYY/MM/DD hh:mm:ss', // 分隔符可以任意定义，该例子表示只显示年月
+   festival: true, //显示节日
+   start: '2014-6-15 23:00:00',
+   istime: true
+})
+
+laydate({
+   elem: '#SC',
+   format: 'YYYY/MM/DD hh:mm:ss', // 分隔符可以任意定义，该例子表示只显示年月
+   festival: true, //显示节日
+   start: '2014-6-15 23:00:00',
+   istime: true
+})
+
+laydate({
+   elem: '#ZC',
+   format: 'YYYY/MM/DD hh:mm:ss', // 分隔符可以任意定义，该例子表示只显示年月
+   festival: true, //显示节日
+   start: '2014-6-15 23:00:00',
+   istime: true
+})
+}();
+</script>
+
+</body>
+</html>

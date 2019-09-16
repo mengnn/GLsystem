@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手机端</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <style>
+      body{
+        padding:0;
+        margin:0;
+      }
+      .content{
+        width: 100%;
+        overflow: hidden;
+      }
+      .title{
+         width: 100%;
+         height: 45px;
+         line-height: 45px;
+         text-align: center;
+         font-size:16px;
+         font-weight: bold;
+      }
+      .time{
+        width: 100%;
+        overflow: hidden;
+        padding-left: 10px;
+        font-size: 13px;
+      }
+      .main_box{
+        width: 100%;
+        overflow: hidden;
+        padding:0 10px;
+        margin-right: 10px;
+      }
+      .main_box img{
+        width: 95%;
+        height: 180px;
+      }
+      .main_content{
+        width: 95%;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+    </style>
+
+</head>
+<body>
+   <div class="content">
+      <div class="title">
+        Royal International公司参加第21届上海美博峰会
+      </div>
+      <div class="time"></div>
+      <div class="main_box">
+         <img src="images/1.jpg" />
+         <div class="main_content">
+            &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum从西元15世纪开始就被广泛地使用在西方的印刷、设计领域中，在电脑排版盛行之后，这段被传统印刷产业使用几百年的无意义文字又再度流行。由于这段文字以“Lorem ipsum”起头，并且常被用于标题的测试中，所以一般称为Lorem ipsum，简称为Lipsum。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum从西元15世纪开始就被广泛地使用在西方的印刷、设计领域中，在电脑排版盛行之后，这段被传统印刷产业使用几百年的无意义文字又再度流行。由于这段文字以“Lorem ipsum”起头，并且常被用于标题的测试中，所以一般称为Lorem ipsum，简称为Lipsum。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum从西元15世纪开始就被广泛地使用在西方的印刷、设计领域中，在电脑排版盛行之后，这段被传统印刷产业使用几百年的无意义文字又再度流行。由于这段文字以“Lorem ipsum”起头，并且常被用于标题的测试中，所以一般称为Lorem ipsum，简称为Lipsum。
+         </div>
+      </div>
+   </div>
+
+<script src="js/jquery.js"></script>
+<script>
+    // 我们自己的 JS 代码
+    /*获取当前时间*/
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var onlyDate = year + '-' + month + '-' + day;
+    //var week = "星期" + "日一二三四五六".split("")[new Date().getDay()];
+    $(".time").html(onlyDate);
+
+</script>
+</body>
+</html>
